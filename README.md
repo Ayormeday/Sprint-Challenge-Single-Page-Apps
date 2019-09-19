@@ -26,10 +26,14 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Explain benefit(s) using `client-side routing`?
 > Answer:
+
+The opposite of Client scide routing is server side router which fires a network request each time a page is reloaded this however mounts pressure on the server. Client side routing will offer different User interfaces for different pages without firing network requests. It is renders websites faster, has a wide range of compatible libraries to create rich site interactions.
+
 - [ ] What does AJAX stand for?
-> Answer:
+> Answer: Asynchronous JavaScript and XML
+
 - [ ] What are `controlled components` in React?
-> Answer:
+> Answer: Controlled components are input form elements whose value is controlled by React
 
 
 ## Project Set Up
