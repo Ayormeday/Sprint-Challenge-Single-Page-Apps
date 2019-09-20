@@ -6,7 +6,7 @@ import styled from "styled-components";
 const characterApi = "https://rickandmortyapi.com/api/character/";
 
 const SyledDivP = styled.div`
-  margin: 80px;
+  margin: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

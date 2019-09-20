@@ -8,7 +8,7 @@ const StyledCard = styled.div`
   flex-wrap: wrap;
   border: 2px solid red;
   width: 30%;
-  margin: 50px auto;
+  margin: 10px auto;
   padding: 50px 210px;
   border-radius: 4px;
   font-size: 1.5rem;
