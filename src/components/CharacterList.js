@@ -34,6 +34,7 @@ export default function CharacterList() {
   return (
     <section className="character-list grid-view">
       <h2>
+        <SearchForm onChange={setInput} value={input} />
         {display.map(character => {
           return <CharacterCard key={character.id} character={character} />;
         })}
@@ -43,3 +44,11 @@ export default function CharacterList() {
 }
 
 
+function SearchForm(props) {
+  const {onChange, value} = props;
+  return (
+    <div>
+      <input type="text" value={value} onChange=(e => {onChange(e.target.value)} />
+    </div>
+  )
+}
