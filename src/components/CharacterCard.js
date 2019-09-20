@@ -1,25 +1,30 @@
 import React from "react";
-import { Card, Icon, Image } from 'semantic-ui-react'
+import styled from "styled-components";
 
-export default function CharacterCard({ character }) {
-  const { image, name, age, species, status, location, origin, episode} = character;
+const StyledCard = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  width: 30%;
+  margin: 50px auto;
+  padding: 50px 210px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+
+export default function CharacterCard(props) {
   return (
-    <Card>
-      <Image src={image} />
-      <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Age>{age}</Card.Age>
-        <Card.Species>{species}</Card.Species>
-        <Card.Status>{status}</Card.Status>
-      </Card.Content>
-      <Card.Content extra>
-        <Card.location>{location}</Card.location>
-        <Card.origin>{origin}</Card.origin>
-        <a>
-          <Icon name='user' />
-          {episode}
-        </a>
-      </Card.Content>
-    </Card>
+    <StyledCard>
+      <img src={props.image} />
+      <h2>{props.name}</h2>
+      <p>{props.status}</p>
+      <p>{props.species}</p>
+      <p>{props.gender}</p>
+      Location: {props.location.name}
+      Origin: {props.origin.name}
+    </StyledCard>
   );
 }
