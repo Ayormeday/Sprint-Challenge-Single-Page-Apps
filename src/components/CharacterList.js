@@ -9,7 +9,7 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
   const [display, setDisplay] = useState([]);
-  const [searchString, setSearchString] = useState("");
+  const [input, setInput] = useState("");
 
   // (const [charactertodisplay])
 
@@ -25,6 +25,10 @@ export default function CharacterList() {
         console.log(error.message);
       });
   }, []);
+
+  useEffect(() => {
+    setDisplay(characters.filter(character=> character.name.toLowerCase().includes(input.toLowerCase())))
+  },[input]);
 
   useEffect(() => {
     setDisplay(characters);
@@ -48,7 +52,7 @@ function SearchForm(props) {
   const {onChange, value} = props;
   return (
     <div>
-      <input type="text" value={value} onChange=(e => {onChange(e.target.value)} />
+      <input type="text" value={value} onChange= {(e => {onChange(e.target.value)})} />
     </div>
   )
 }
