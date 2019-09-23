@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 const characterApi = "https://rickandmortyapi.com/api/character/";
 
@@ -48,11 +49,12 @@ export default function CharacterList() {
 }
 
 
-function SearchForm(props) {
-  const {onChange, value} = props;
-  return (
-    <div>
-      <input type="text" value={value} onChange= {(e => {onChange(e.target.value)})} />
-    </div>
-  )
-}
+// function SearchForm(props) {
+//   const {onChange, value} = props;
+//   return (
+//     <div>
+//       <input type="text" value={value} onChange= {(e => {onChange(e.target.value)})} />
+//     </div>
+//   )
+// }
+
