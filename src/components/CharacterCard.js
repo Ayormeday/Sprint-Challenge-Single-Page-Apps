@@ -26,12 +26,21 @@ flex-direction: column;
 flex-wrap: wrap;
 padding: 20px 0;
 border: 1px solid ;
+padding-left: 1rem;
 `
 
 const Container = styled.div`
-
-
-
+display:flex;
+flex-direction: row;
+`
+const CardContent = styled.div `
+  font-size: 2rem;
+`
+const CardContentP = styled.div`
+font-size: 1.5rem;
+`
+const CardContentExtra = styled.div `
+padding-top: 2rem;
 `
 
 export default function CharacterCard({ character }) {
@@ -41,22 +50,22 @@ export default function CharacterCard({ character }) {
 
       <CardStyled>
         <Image src={image} wrapped ui={false} />
-        <Card.Content>
+        <CardContent>
           <Card.Header>{name}</Card.Header>
-          <Card.Meta>
+          <CardContentP>
         {species}, {status}
-          </Card.Meta>
-          <Card.Description>
+          </CardContentP>
+          <CardContentP>
         {gender} 
-          </Card.Description>
-          <Card.Description>{location.name} {origin.name}</Card.Description>
-        </Card.Content>
-        <Card.Content extra>
+          </CardContentP>
+          <CardContentP>{location.name} {origin.name}</CardContentP>
+        </CardContent>
+        <CardContentExtra>
           <a>
             <Icon name='user' />
             Episodes
           </a>
-        </Card.Content>
+        </CardContentExtra>
       </CardStyled>
     </Container>
 
