@@ -31,7 +31,7 @@ border: 1px solid ;
 const Container = styled.div`
 
 
-margin-right: 2px;
+
 `
 
 export default function CharacterCard({ character }) {
