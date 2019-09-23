@@ -6,6 +6,9 @@ import SearchForm from "./SearchForm";
 const characterApi = "https://rickandmortyapi.com/api/character/";
 
 
+
+
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);

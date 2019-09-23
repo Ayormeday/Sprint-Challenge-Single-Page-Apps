@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+
+const HeaderStyle = styled.header `
+
+`
 
 export default function Header() {
   return (
